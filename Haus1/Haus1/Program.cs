@@ -17,23 +17,23 @@ namespace Haus1
             Console.WriteLine("Seite a:");
             if (!Double.TryParse(input = Console.ReadLine(), out da)) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             da = Double.Parse(input);
-            if (da <= 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
+            if (da < 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             Console.WriteLine("Seite b:");
             if (!Double.TryParse(input = Console.ReadLine(), out db)) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             db = Double.Parse(input);
-            if (db <= 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
+            if (db < 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             Console.WriteLine("Seite c:");
             if (!Double.TryParse(input = Console.ReadLine(), out dc)) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             dc = Double.Parse(input);
-            if (dc <= 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
+            if (dc < 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             Console.WriteLine("Seite d:");
             if (!Double.TryParse(input = Console.ReadLine(), out dd)) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             dd = Double.Parse(input);
-            if (dd <= 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
+            if (dd < 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             Console.WriteLine("Seite e:");
             if (!Double.TryParse(input = Console.ReadLine(), out de)) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             de = Double.Parse(input);
-            if (de <= 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
+            if (de < 1) { Console.WriteLine("Es wurden falsche Eingaben gemacht.\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             if (db < de + 6 || da < dd + 6) { Console.WriteLine("Es wurden falsche Angaben gemacht.\nErrorcode: minimum distance 3m\nDrücke Q zum Beenden."); while (Console.ReadKey(true).Key != ConsoleKey.Q); return; }
             df = Math.Sqrt(Math.Pow((dc-da), 2) * Math.Pow(db, 2));
             double dPerimeterFence = da + db + dc + dd + de + df;
